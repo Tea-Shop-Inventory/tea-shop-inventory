@@ -6,3 +6,5 @@ What's the difference between a kleptomaniac and a literalist?
 
 a kleptomaniac takes things, literally
 a ltteralist takes things literally
+
+***************
