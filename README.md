@@ -21,4 +21,3 @@ Why did the Java programmer quit his job?
 Because he didnt get arrays.
 
 ---
-
