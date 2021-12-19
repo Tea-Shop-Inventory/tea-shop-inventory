@@ -2,10 +2,7 @@
 An App for managing inventory in a tea shop!
 
 
-What's the difference between a kleptomaniac and a literalist?
+test change to readme
 
-a kleptomaniac takes things, literally
 
-a literalist takes things literally
- test change to readme
 ***************
