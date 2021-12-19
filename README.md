@@ -15,3 +15,9 @@ What is the difference between a jeweler and a jailer?
 A jeweler sells watches and a jailer watches cells.
 
 ---
+
+Why did the Java programmer quit his job?
+
+Because he didnt get arrays.
+
+---
