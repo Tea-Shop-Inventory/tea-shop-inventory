@@ -21,3 +21,7 @@ Why did the Java programmer quit his job?
 Because he didnt get arrays.
 
 ---
+
+What did the ocean say to the beach?
+
+Nothing, it just waved.
