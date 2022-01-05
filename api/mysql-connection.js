@@ -1,18 +1,36 @@
-var mysql = require('mysql');
+const express = require('express'),
+  router = express.Router();
 
-var con = mysql.createConnection({
-  host: "tea-shop-inventory.clytprcklf67.us-east-2.rds.amazonaws.com",
-  user: "Tea_Shop1",
-  password: "lc101Project",
-  database: "tea-shop-inventory"
+// get tea lists
+router.get('/list', function(req, res) {
+  let sql = `SELECT * FROM tea`;
+  db.query(sql, function(err, data, fields) {
+    if (err) throw err;
+    res.json({
+      status: 200,
+      data,
+      message: "tea lists retrieved successfully"
+    })
+  })
 });
 
-con.connect(function(err) {
+// create new tea
+router.post('/new', function(req, res) {
+  let sql = `INSERT INTO tea(name, brand, type, type, quantity, description) VALUES (?)`;
+  let values = [
+    req.body.name,
+    req.body.brand,
+    req.body.type,
+    req.body.quantity,
+    req.body.description,
+  ];
+  db.query(sql, [values], function(err, data, fields) {
     if (err) throw err;
-    console.log("Connected!");
-    var sql = "CREATE TABLE users (id SMALLINT UNASIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(30) NOT NULL, password VARCHAR(30)) NOT NULL";
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("Table created");
-    });
-  });
+    res.json({
+      status: 200,
+      message: "New tea added successfully"
+    })
+  })
+});
+
+module.exports = router;
