@@ -2,8 +2,8 @@ const express = require('express'),
   router = express.Router();
 
 // get tea lists
-router.get('/', function(req, res) {
-  /*let sql = `SELECT * FROM tea`;
+router.get('/list', function(req, res) {
+  let sql = `SELECT * FROM tea`;
   db.query(sql, function(err, data, fields) {
     if (err) throw err;
     res.json({
@@ -11,8 +11,7 @@ router.get('/', function(req, res) {
       data,
       message: "tea lists retrieved successfully"
     })
-  })*/
-  res.json({message:"Test message"})
+  })
 });
 
 // create new tea
