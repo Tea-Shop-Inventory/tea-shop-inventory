@@ -1,10 +1,11 @@
 import React, {useState , useEffect} from "react";
-import { Products, Navbar} from './components'
+import { Products, Navbar, Cart} from './components'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { commerce } from './lib/commerce';
 
 function App() {
   // const [products, setProducts] = useState([])
-  // const [cart, setCart] = useState({})
+  const [cart, setCart] = useState({})
 
   // const fetchProducts = async () => {
   //   const { data } = await commerce.products.list();
@@ -29,14 +30,24 @@ function App() {
 // }, []);
 
 
-  return (
-    <div className="App">
+  return ( 
+    <Router>
+      <div className="App">
+        <Navbar/>
 
-    
-    
-      <Navbar/>
-      <Products /> 
-    </div>
+        <Switch>
+
+        <Route path="/" exact component={Products}/>
+
+
+        <Route path="/cart" exact component={Cart}/>
+
+
+           
+          
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

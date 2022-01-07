@@ -11,24 +11,57 @@ export default makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
   },
+
   title: {
     flexGrow: 1,
     alignItems: 'center',
     display: 'flex',
     textDecoration: 'none',
+    fontFamily: "PlayItalic",
   },
+
   image: {
+    width: '20%',
+    height: '20%',
     marginRight: '10px',
   },
+
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
   },
+
   grow: {
     flexGrow: 1,
+   
   },
+
+  log: {
+    flexGrow: 1,
+    textAlign: 'center',
+    marginLeft: '50%',
+    "&:hover": {
+      border: "1px solid grey",
+      
+   },
+    // alignItems: 'right',
+    "&:hover": {
+      border: "1px solid grey",
+      
+   },
+  },
+
+  sign: {
+    flexGrow: 1,
+    textAlign: 'center',
+    "&:hover": {
+      border: "1px solid grey",
+      
+   },
+  },
+
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -43,6 +76,7 @@ export default makeStyles((theme) => ({
       width: 'auto',
     },
   },
+
   searchIcon: {
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -52,9 +86,11 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   inputRoot: {
     color: 'inherit',
   },
+
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
