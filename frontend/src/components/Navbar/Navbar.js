@@ -1,18 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import {AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography} from '@material-ui/core';
 import {ShoppingCart } from '@material-ui/icons'
 import { Link, useLocation } from 'react-router-dom'
 import assets from '../../assets/assets';
 
 import useStyles from './styles.js';
-import Logo from '../../assets/logo2.png'
+import Logo from '../../assets/logo4.jpg'
+
+import { connect } from "react-redux";
 
  
-const Navbar = () => {
+const Navbar = ({ cart }) => {
     const classes = useStyles()
     const location = useLocation();
+    const [cartCount, setCartCount] = useState(0);
 
-    if(location.pathname)
+    useEffect(() => {
+        let count = 0;
+        cart.forEach((item) => {
+          count += item.qty;
+        });
+    
+        setCartCount(count);
+      }, [cart, cartCount]);
+
+    
     return (
         <>
 
@@ -23,7 +35,7 @@ const Navbar = () => {
                         Tea Shop
                     </Typography>
 
-                    <Typography variant='caption' className={classes.log} color='inherit'>
+                    <Typography component={Link} to='/login' variant='caption' className={classes.log} color='inherit'>
                         Log In  
                     </Typography>
 
@@ -35,16 +47,16 @@ const Navbar = () => {
 
 
                     <div className={classes.grow}/>
-                    {location.pathname == '/' && (
+                    
                     <div className={classes.button}>
                         <IconButton component={Link} to='/cart' arialabel='show cart items' color='inherit'>
-                            <Badge badgeContent={2} color='secondary'>
+                            <Badge badgeContent={ cartCount } color='secondary'>
                                 <ShoppingCart/>
                             </Badge>
                         </IconButton>
 
 
-                    </div>)}
+                    </div>
                 </Toolbar>
 
 
@@ -54,4 +66,12 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+    return {
+      cart: state.shop.cart,
+    };
+  };
+  
+  export default connect(mapStateToProps)(Navbar);
+
+

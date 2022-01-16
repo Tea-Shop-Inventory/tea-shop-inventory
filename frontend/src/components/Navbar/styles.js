@@ -46,11 +46,7 @@ export default makeStyles((theme) => ({
       border: "1px solid grey",
       
    },
-    // alignItems: 'right',
-    "&:hover": {
-      border: "1px solid grey",
-      
-   },
+   
   },
 
   sign: {
