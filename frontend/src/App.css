@@ -36,3 +36,68 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Zen";
+  src: local("MyFont"), url(../../Fonts/ZenOldMincho-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ZenKaku";
+  src: local("MyFont"), url(../../Fonts/ZenKakuGothicNew-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Noto";
+  src: local("MyFont"), url(../../Fonts/NotoSerifDisplay-ThinItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Notol";
+  src: local("MyFont"), url(../../Fonts/NotoSerifDisplay-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Zen2";
+  src: local("MyFont"), url(../../Fonts/ZenOldMincho-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "PlayItalic";
+  src: local("MyFont"), url(../../Fonts/PlayfairDisplay-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "cmu";
+  src: local("MyFont"), url(../../Fonts/cmunrm.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "dancing";
+  src: local("MyFont"), url(../../Fonts/DancingScript-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "calibre";
+  src: local("MyFont"), url(./Fonts/TestCalibre-Light.otf) format("OpenType");
+}
+
+@font-face {
+  font-family: "Manuka";
+  src: local("MyFont"), url(./Fonts/TestManukaCondensed-Light.otf) format("OpenType");
+}
+
+@font-face {
+  font-family: "Epicene";
+  src: local("MyFont"), url(./Fonts/TestEpiceneDisplay-Light.otf) format("OpenType");
+}
+
+@font-face {
+  font-family: "Domaine";
+  src: local("MyFont"), url(./Fonts/TestDomaineSansDisplay-Light.otf) format("OpenType");
+}
+
+@font-face {
+  font-family: "ManukaL";
+  src: local("MyFont"), url(./Fonts/TestManuka-Light.otf) format("OpenType");
+}
