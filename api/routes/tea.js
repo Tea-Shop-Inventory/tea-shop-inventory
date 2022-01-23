@@ -16,12 +16,13 @@ router.get('/list', function(req, res) {
 
 // create new tea
 router.post('/new', function(req, res) {
-  let sql = `INSERT INTO tea(name, brand, type, type, quantity, description) VALUES (?)`;
+  let sql = `INSERT INTO tea(name, brand, type, quantity, price, description) VALUES (?)`;
   let values = [
     req.body.name,
     req.body.brand,
     req.body.type,
     req.body.quantity,
+    req.body.price,
     req.body.description,
   ];
   db.query(sql, [values], function(err, data, fields) {
