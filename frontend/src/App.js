@@ -7,6 +7,13 @@ import Data from "./Data";
 // import { commerce } from './lib/commerce';
 
 function App() {
+<<<<<<< HEAD
+  return (
+    <div className="App">
+      <h1>Hello World!!!!</h1>
+      <button type="button">Sign up</button>
+    </div>
+=======
   // const [products, setProducts] = useState([])
   
   const { products } = Data;
@@ -89,6 +96,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+>>>>>>> 5669319ce64252ee5a88a75d0df87e1156ba02bb
   );
 }
 
