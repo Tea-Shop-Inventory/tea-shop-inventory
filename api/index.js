@@ -19,12 +19,14 @@ var server = {
 
 // routers
 const teaRouter = require('./routes/tea');
+const usersRouter = require('./routes/users');
 
 // use the modules
 app.use(cors())
 app.use(bodyParser.json());
 
 // use router
+app.use('/users', usersRouter);
 app.use('/tea', teaRouter);
 app.get('/', function(req, res, next) {
     res.send("Hello world");
