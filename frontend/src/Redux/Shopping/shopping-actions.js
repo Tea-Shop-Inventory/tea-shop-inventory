@@ -1,5 +1,11 @@
 import * as actionTypes from "./shopping-types";
 
+// export const fetchData = () => {
+//   return (dispatch) => {
+
+//   }
+// }
+
 export const addToCart = (itemID) => {
   return {
     type: actionTypes.ADD_TO_CART,
