@@ -18,7 +18,7 @@ const Signup = () => {
         method: "POST",
         body: JSON.stringify({
           name: name,
-          email: email,
+          username: email,
           password: password,
         }),
       });
@@ -40,7 +40,7 @@ const Signup = () => {
   
   return (
       
-    <form className={classes.container} noValidate autoComplete="off">
+    <form className={classes.container} onSubmit={handleSubmit} noValidate autoComplete="off">
       <Card className={classes.card}>
         <CardHeader className={classes.header} title="Create an Account" />
         <CardContent>
