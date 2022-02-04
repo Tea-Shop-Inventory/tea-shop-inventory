@@ -1,5 +1,5 @@
 import React, {useState , useEffect} from "react";
-import { Products, Navbar, Cart, Login} from './components'
+import { Products, Navbar, Cart, Login, Signup} from './components'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Data from "./Data";
 
@@ -82,6 +82,10 @@ function App() {
 
         <Route exact path="/login">
             <Login />
+        </Route>
+
+        <Route exact path="/signup">
+            <Signup />
         </Route>
 
 

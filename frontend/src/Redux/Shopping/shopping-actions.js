@@ -1,8 +1,23 @@
 import * as actionTypes from "./shopping-types";
 
+// export const fetchData = () => {
+//   return (dispatch) => {
+
+//   }
+// }
+
 export const addToCart = (itemID) => {
   return {
     type: actionTypes.ADD_TO_CART,
+    payload: {
+      id: itemID,
+    },
+  };
+};
+
+export const removeOneFromCart = (itemID) => {
+  return {
+    type: actionTypes.REMOVE_ONE_FROM_CART,
     payload: {
       id: itemID,
     },

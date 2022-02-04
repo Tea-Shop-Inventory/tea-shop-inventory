@@ -1,32 +1,38 @@
 
 import React, { useState } from 'react';
-import { GoogleLogin, GoogleLogout } from 'react-google-login';
+// import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import './Login.css'
 
 
-const clientId = "Your-Client-Id";
+// const clientId = "Your-Client-Id";
 
 
 const Login = () => {
+  fetch(
+    "http://localhost:4040/users/list")
+                .then((res) => res.json())
+                .then((json) => {
+                    test = json
+                })
 
-    const [showloginButton, setShowloginButton] = useState(true);
-    const [showlogoutButton, setShowlogoutButton] = useState(false);
-    const onLoginSuccess = (res) => {
-        console.log('Login Success:', res.profileObj);
-        setShowloginButton(false);
-        setShowlogoutButton(true);
-    };
+    // const [showloginButton, setShowloginButton] = useState(true);
+    // const [showlogoutButton, setShowlogoutButton] = useState(false);
+    // const onLoginSuccess = (res) => {
+    //     console.log('Login Success:', res.profileObj);
+    //     setShowloginButton(false);
+    //     setShowlogoutButton(true);
+    // };
 
-    const onLoginFailure = (res) => {
-        console.log('Login Failed:', res);
-    };
+    // const onLoginFailure = (res) => {
+    //     console.log('Login Failed:', res);
+    // };
 
-    const onSignoutSuccess = () => {
-        alert("You have been logged out successfully");
-        console.clear();
-        setShowloginButton(true);
-        setShowlogoutButton(false);
-    };
+    // const onSignoutSuccess = () => {
+    //     alert("You have been logged out successfully");
+    //     console.clear();
+    //     setShowloginButton(true);
+    //     setShowlogoutButton(false);
+    // };
 
 
     return (
@@ -34,10 +40,10 @@ const Login = () => {
 
         <div>
 
-        
-      {/* <h1 className="loginTitle">Choose a Login Method</h1> */}
+        <div>console.log({test})</div>
+      {/* <h1 className="loginTitle">Choose a Login Method</h1>
       <div className="grapper">
-        {/* <div className="left">
+        <div className="left">
           <div className="loginButton google" >
             <img src={Google} alt="" className="icon" />
             Google
@@ -50,7 +56,7 @@ const Login = () => {
             <img src={Github} alt="" className="icon" />
             Github
           </div>
-        </div> */}
+        </div>
         
         <div className="right">
           <input type="text" placeholder="Username" />
@@ -82,7 +88,7 @@ const Login = () => {
                     onLogoutSuccess={onSignoutSuccess}
                 >
                 </GoogleLogout> : null
-            }
+            } */}
         </div>
 
         

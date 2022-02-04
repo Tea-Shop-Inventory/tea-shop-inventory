@@ -39,7 +39,7 @@ const Navbar = ({ cart }) => {
                         Log In  
                     </Typography>
 
-                    <Typography variant='caption' className={classes.sign} color='inherit'>
+                    <Typography component={Link} to='/Signup' variant='caption' className={classes.sign} color='inherit'>
                         Sign up 
                     </Typography>
 
