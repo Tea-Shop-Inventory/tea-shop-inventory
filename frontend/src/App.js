@@ -8,8 +8,6 @@ import Data from "./Data";
 
 function App() {
 
-  
-
   // const [products, setProducts] = useState([])
   
   const { products } = Data;
