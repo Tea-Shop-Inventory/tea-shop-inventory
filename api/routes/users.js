@@ -1,5 +1,5 @@
-const express = require('express'),
-  router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 // get user lists
 router.get('/list', function(req, res) {
@@ -32,6 +32,7 @@ router.post('/new', function(req, res) {
 });
 
 // 1) Receive POST request containing the usernam and password from the login form
+
 
 // 2) Try to lookup Usernam in database
 //    - If there is no match, return an error -- HTTP 401: Also return error message on the response "Could not find matching username"
